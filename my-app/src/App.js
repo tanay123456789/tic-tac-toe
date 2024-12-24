@@ -27,6 +27,38 @@ function App(){
       } else {
         nextSquares[i] = 'O';
       }
+      const result=winner(nextSquares)
+      
+      function winner(nextSquares){
+        if (nextSquares[0]==nextSquares[1]&&nextSquares[1]==nextSquares[2]&&nextSquares[0]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[3]==nextSquares[4]&&nextSquares[3]==nextSquares[5]&& nextSquares[3]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[6]==nextSquares[7]&&nextSquares[6]==nextSquares[8]&& nextSquares[6]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[0]==nextSquares[3]&&nextSquares[0]==nextSquares[6]&&nextSquares[0]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[0]==nextSquares[1]&&nextSquares[1]==nextSquares[2]&&nextSquares[0]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[1]==nextSquares[4]&&nextSquares[1]==nextSquares[7]&&nextSquares[1]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[2]==nextSquares[5]&&nextSquares[2]==nextSquares[8]&&nextSquares[2]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[0]==nextSquares[4]&&nextSquares[0]==nextSquares[8]&&nextSquares[0]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        if (nextSquares[2]==nextSquares[4]&&nextSquares[2]==nextSquares[6]&&nextSquares[2]!=null){
+          console.log(nextSquares[i],"wins");
+        }
+        
+      }
       setSquares(nextSquares);
       setXIsNext(!xIsNext);
     }
